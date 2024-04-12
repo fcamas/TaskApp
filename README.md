@@ -13,6 +13,7 @@
 
 ## Video Walkthrough
 
+![Demo](https://github.com/fcamas/TaskApp/assets/76220782/8a225285-25ff-4acc-a29b-2ca563dfb5b8)
 
 ## Notes
 
