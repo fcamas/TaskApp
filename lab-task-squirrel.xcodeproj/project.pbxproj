@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11A025CE2BDC0B2000F12D86 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A025CD2BDC0B2000F12D86 /* TaskViewController.swift */; };
+		11A025D02BDC0FB600F12D86 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A025CF2BDC0FB600F12D86 /* Item.swift */; };
 		CB57503A2929E62C00890962 /* TaskAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5750392929E62C00890962 /* TaskAnnotationView.swift */; };
 		CB602B9929247359006C6727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB602B9829247359006C6727 /* AppDelegate.swift */; };
 		CB602B9B29247359006C6727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB602B9A29247359006C6727 /* SceneDelegate.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		11A025CD2BDC0B2000F12D86 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		11A025CF2BDC0FB600F12D86 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CB5750392929E62C00890962 /* TaskAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAnnotationView.swift; sourceTree = "<group>"; };
 		CB602B9529247359006C6727 /* lab-task-squirrel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lab-task-squirrel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB602B9829247359006C6727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				CB9D9ED0292483BC00F8F51B /* Task.swift */,
+				11A025CF2BDC0FB600F12D86 /* Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11A025D02BDC0FB600F12D86 /* Item.swift in Sources */,
 				CB9D9ED4292488B000F8F51B /* TaskDetailViewController.swift in Sources */,
 				CB602BAD292476F4006C6727 /* TaskCell.swift in Sources */,
 				CB602B9D29247359006C6727 /* TaskListViewController.swift in Sources */,
