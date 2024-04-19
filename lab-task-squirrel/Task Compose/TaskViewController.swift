@@ -17,6 +17,12 @@ class TaskViewController: UIViewController{
             tableView.reloadData()
         }
     }
+    
+    var titleText: String  = "Task"{
+        didSet{
+            title = titleText
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
