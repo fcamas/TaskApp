@@ -7,6 +7,9 @@
 
 import UIKit
 
+class K {
+    static let iForCell = "ItemCell"
+}
 class TaskViewController: UIViewController{
     var tableView: UITableView!
     var empyStateLabel: UILabel!
@@ -26,6 +29,15 @@ class TaskViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
+        loadUI()
+    }
+    
+    private func loadUI() {
+        tableView = UITableView(frame:view.bounds, style: .plain)
+        tableView.register(ItemCell, forCellReuseIdentifier: K.iForCell)
+        tableView.dataSource = self
+        tableView.delegate = self
+        view.addSubview(tableView)
     }
 }
 
