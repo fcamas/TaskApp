@@ -28,6 +28,11 @@ class ItemCell: UITableViewCell {
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            
+            cellElement.leadingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
+            cellElement.centerYAnchor.constraint(equalTo: centerYAnchor),
+            cellElement.widthAnchor.constraint(equalToConstant: 24),
+            cellElement.heightAnchor.constraint(equalToConstant: 24),
         ])
     }
 }
