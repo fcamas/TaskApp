@@ -34,7 +34,7 @@ class TaskViewController: UIViewController{
     
     private func loadUI() {
         tableView = UITableView(frame:view.bounds, style: .plain)
-        tableView.register(ItemCell, forCellReuseIdentifier: K.iForCell)
+        tableView.register(ItemCell.self, forCellReuseIdentifier: K.iForCell)
         tableView.dataSource = self
         tableView.delegate = self
         view.addSubview(tableView)
@@ -46,11 +46,13 @@ extension TaskViewController: UITableViewDelegate{
 }
 extension TaskViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.iForCell, for: indexPath) as!  ItemCell
+        cell.configure(with: items[indexPath.row])
+        return cell 
     }
     
     
