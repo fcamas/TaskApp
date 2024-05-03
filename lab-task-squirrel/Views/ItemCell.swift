@@ -14,7 +14,7 @@ class ItemCell: UITableViewCell {
         return label
     }()
     
-    let cellElement:UIImageView = {
+    let elementCell:UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -31,17 +31,24 @@ class ItemCell: UITableViewCell {
     
     private func setupView() {
         addSubview(titleLabel)
-        addSubview(cellElement)
+        addSubview(elementCell)
         
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             
-            cellElement.leadingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
-            cellElement.centerYAnchor.constraint(equalTo: centerYAnchor),
-            cellElement.widthAnchor.constraint(equalToConstant: 24),
-            cellElement.heightAnchor.constraint(equalToConstant: 24),
+            elementCell.leadingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
+            elementCell.centerYAnchor.constraint(equalTo: centerYAnchor),
+            elementCell.widthAnchor.constraint(equalToConstant: 24),
+            elementCell.heightAnchor.constraint(equalToConstant: 24),
         ])
+    }
+    
+    func configure (with item: Item){
+        titleLabel.text = item.title
+        titleLabel.textColor = item.isComplete ? .secondaryLabel : .label
+        elementCell.image = UIImage(systemName: item.isComplete ?  "checkmark.circle" : "circle")?.withRenderingMode(.alwaysTemplate)
+        elementCell.tintColor = item.isComplete ? .systemGreen: .systemRed
     }
 }
