@@ -41,8 +41,11 @@ class TaskViewController: UIViewController{
     }
 }
 
-extension TaskViewController: UITableViewDelegate{
+extension TaskViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       // MARK:- Present detail
+    }
 }
 extension TaskViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
