@@ -8,15 +8,15 @@
 import UIKit
 
 class K {
-    static let iForCell = "ItemCell"
+    static let itemCellIdentifier = "ItemCell"
 }
 class TaskViewController: UIViewController{
     var tableView: UITableView!
-    var empyStateLabel: UILabel!
+    var emptyStateLabel: UILabel!
     
     var items = [Item]() {
         didSet{
-            empyStateLabel.isHidden = !items.isEmpty
+            emptyStateLabel.isHidden = !items.isEmpty
             tableView.reloadData()
         }
     }
@@ -34,10 +34,16 @@ class TaskViewController: UIViewController{
     
     private func loadUI() {
         tableView = UITableView(frame:view.bounds, style: .plain)
-        tableView.register(ItemCell.self, forCellReuseIdentifier: K.iForCell)
+        tableView.register(ItemCell.self, forCellReuseIdentifier: K.itemCellIdentifier)
         tableView.dataSource = self
         tableView.delegate = self
         view.addSubview(tableView)
+        
+        emptyStateLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 50))
+        emptyStateLabel.center = view.center
+        emptyStateLabel.textAlignment = .center
+        emptyStateLabel.text = "No Items"
+        view.addSubview(emptyStateLabel)
     }
 }
 
@@ -53,7 +59,7 @@ extension TaskViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.iForCell, for: indexPath) as!  ItemCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.itemCellIdentifier, for: indexPath) as!  ItemCell
         cell.configure(with: items[indexPath.row])
         return cell 
     }
