@@ -56,6 +56,13 @@ extension TaskViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        // MARK:- Present detail
+        presentDetailViewController()
+    }
+    
+    func presentDetailViewController(){
+        let detailViewController = TaskDetailController()
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+        
     }
 }
 extension TaskViewController: UITableViewDataSource{

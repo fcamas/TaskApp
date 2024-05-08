@@ -10,6 +10,7 @@
 		11A025CE2BDC0B2000F12D86 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A025CD2BDC0B2000F12D86 /* TaskViewController.swift */; };
 		11A025D02BDC0FB600F12D86 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A025CF2BDC0FB600F12D86 /* Item.swift */; };
 		11A025D32BDC2D2B00F12D86 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A025D22BDC2D2B00F12D86 /* ItemCell.swift */; };
+		11FE4DD32BF50F8B002DA75B /* TaskDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE4DD22BF50F8B002DA75B /* TaskDetailController.swift */; };
 		CB57503A2929E62C00890962 /* TaskAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5750392929E62C00890962 /* TaskAnnotationView.swift */; };
 		CB602B9929247359006C6727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB602B9829247359006C6727 /* AppDelegate.swift */; };
 		CB602B9B29247359006C6727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB602B9A29247359006C6727 /* SceneDelegate.swift */; };
@@ -27,6 +28,7 @@
 		11A025CD2BDC0B2000F12D86 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		11A025CF2BDC0FB600F12D86 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		11A025D22BDC2D2B00F12D86 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		11FE4DD22BF50F8B002DA75B /* TaskDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailController.swift; sourceTree = "<group>"; };
 		CB5750392929E62C00890962 /* TaskAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAnnotationView.swift; sourceTree = "<group>"; };
 		CB602B9529247359006C6727 /* lab-task-squirrel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lab-task-squirrel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB602B9829247359006C6727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				CB9D9ED3292488B000F8F51B /* TaskDetailViewController.swift */,
 				CB5750392929E62C00890962 /* TaskAnnotationView.swift */,
+				11FE4DD22BF50F8B002DA75B /* TaskDetailController.swift */,
 			);
 			path = "Task Detail";
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				CB602B9D29247359006C6727 /* TaskListViewController.swift in Sources */,
 				CB9D9EDA292489E000F8F51B /* TaskComposeViewController.swift in Sources */,
 				CB57503A2929E62C00890962 /* TaskAnnotationView.swift in Sources */,
+				11FE4DD32BF50F8B002DA75B /* TaskDetailController.swift in Sources */,
 				CB602B9929247359006C6727 /* AppDelegate.swift in Sources */,
 				CB602B9B29247359006C6727 /* SceneDelegate.swift in Sources */,
 				CB9D9ED1292483BC00F8F51B /* Task.swift in Sources */,
