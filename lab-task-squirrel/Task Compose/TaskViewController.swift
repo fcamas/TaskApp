@@ -30,6 +30,7 @@ class TaskViewController: UIViewController{
         super.viewDidLoad()
         view.backgroundColor = .red
         loadUI()
+        populateMockData()
     }
     
     private func loadUI() {
@@ -44,6 +45,10 @@ class TaskViewController: UIViewController{
         emptyStateLabel.textAlignment = .center
         emptyStateLabel.text = "No Items"
         view.addSubview(emptyStateLabel)
+    }
+    
+    private func populateMockData(){
+        items = Item.mockedItems
     }
 }
 
