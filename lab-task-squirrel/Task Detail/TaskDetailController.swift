@@ -11,12 +11,19 @@ import PhotosUI
 
 class TaskDetailController: UIViewController{
     
+    var item: Item!
+    
     var doneImage: UIImageView!
     var doneLabel: UILabel!
     var titleLabel: UILabel!
     var descrptionLabel: UILabel!
     var addPhotoButton: UIButton!
     var mapView:MKMapView!
+    
+    let buttonTitle = "Add Photo"
+    let buttonBackgroundColor = UIColor.systemGreen
+    let buttonCornerRadius:CGFloat = 8.0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
