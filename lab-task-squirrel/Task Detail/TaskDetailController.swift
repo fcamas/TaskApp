@@ -13,10 +13,15 @@ class TaskDetailController: UIViewController{
     
     var item: Item!
     
-    var doneImage: UIImageView!
+    var doneImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     var doneLabel: UILabel!
     var titleLabel: UILabel!
-    var descrptionLabel: UILabel!
+    var descriptionLabel: UILabel!
     var addPhotoButton: UIButton!
     var mapView:MKMapView!
     
@@ -29,6 +34,23 @@ class TaskDetailController: UIViewController{
         super.viewDidLoad()
         view.backgroundColor = .red
         
+    }
+    
+    private func setupUI() {
+        addSubview(doneImage)
+        addSubview(doneLabel)
+        addSubview(titleLabel)
+        addSubview(descriptionLabel)
+        addSubview(addPhotoButton)
+        addSubview(addPhotoButton)
+        addSubview(mapView)
+        
+        NSLayoutConstraint.activate([
+            doneImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            doneImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            doneImage.widthAnchor.constraint(equalToConstant: 24),
+            doneImage.heightAnchor.constraint(equalToConstant: 24),
+        ])
     }
     
 }
