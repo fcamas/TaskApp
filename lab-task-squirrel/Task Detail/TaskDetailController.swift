@@ -19,7 +19,11 @@ class TaskDetailController: UIViewController{
         return imageView
     }()
     
-    var doneLabel: UILabel!
+    var doneLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     var titleLabel: UILabel!
     var descriptionLabel: UILabel!
     var addPhotoButton: UIButton!
@@ -50,6 +54,10 @@ class TaskDetailController: UIViewController{
             doneImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             doneImage.widthAnchor.constraint(equalToConstant: 24),
             doneImage.heightAnchor.constraint(equalToConstant: 24),
+            
+            doneLabel.topAnchor.constraint(equalTo: doneImage.topAnchor),
+            doneLabel.leadingAnchor.constraint(equalTo: doneImage.trailingAnchor, constant: 16),
+            doneLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -16),
         ])
     }
     
