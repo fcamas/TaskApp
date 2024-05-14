@@ -24,12 +24,19 @@ class TaskDetailController: UIViewController{
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
     var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    var descriptionLabel: UILabel!
+    
+    var descriptionLabel: UILabel = {
+        var label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     var addPhotoButton: UIButton!
     var mapView:MKMapView!
     
@@ -45,6 +52,7 @@ class TaskDetailController: UIViewController{
     }
     
     private func setupUI() {
+        
         addSubview(doneImage)
         addSubview(doneLabel)
         addSubview(titleLabel)
@@ -66,6 +74,10 @@ class TaskDetailController: UIViewController{
             titleLabel.topAnchor.constraint(equalTo: doneImage.bottomAnchor,constant: 16),
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16),
+            descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
         ])
     }
     
