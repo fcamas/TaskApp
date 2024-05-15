@@ -32,12 +32,17 @@ class TaskDetailController: UIViewController{
     }()
     
     var descriptionLabel: UILabel = {
-        var label = UILabel()
+        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    var addPhotoButton: UIButton!
+    var addPhotoButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     var mapView:MKMapView!
     
     let buttonTitle = "Add Photo"
@@ -47,19 +52,20 @@ class TaskDetailController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        
+        setupUI()
+        configureButton()
         
     }
     
     private func setupUI() {
         
-        addSubview(doneImage)
-        addSubview(doneLabel)
-        addSubview(titleLabel)
-        addSubview(descriptionLabel)
-        addSubview(addPhotoButton)
-        addSubview(addPhotoButton)
-        addSubview(mapView)
+        view.addSubview(doneImage)
+        view.addSubview(doneLabel)
+        view.addSubview(titleLabel)
+        view.addSubview(descriptionLabel)
+        view.addSubview(addPhotoButton)
+        view.addSubview(mapView)
         
         NSLayoutConstraint.activate([
             doneImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
@@ -81,4 +87,9 @@ class TaskDetailController: UIViewController{
         ])
     }
     
+    private func configureButton() {
+           addPhotoButton.setTitle(buttonTitle, for: .normal)
+           addPhotoButton.backgroundColor = buttonBackgroundColor
+           addPhotoButton.layer.cornerRadius = buttonCornerRadius
+       }
 }
