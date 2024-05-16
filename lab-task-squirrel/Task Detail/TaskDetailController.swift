@@ -43,7 +43,11 @@ class TaskDetailController: UIViewController{
         return button
     }()
     
-    var mapView:MKMapView!
+    var mapView:MKMapView = {
+        let map = MKMapView()
+        map.translatesAutoresizingMaskIntoConstraints = false
+        return map
+    }()
     
     let buttonTitle = "Add Photo"
     let buttonBackgroundColor = UIColor.systemGreen
@@ -84,6 +88,12 @@ class TaskDetailController: UIViewController{
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16),
             descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            
+            mapView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 16),
+            mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            mapView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
+            mapView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height/3),
         ])
     }
     
