@@ -94,6 +94,10 @@ class TaskDetailController: UIViewController{
             mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             mapView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
             mapView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height/3),
+            
+            addPhotoButton.topAnchor.constraint(equalTo: mapView.bottomAnchor, constant: 16),
+            addPhotoButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            addPhotoButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
     }
     
