@@ -101,6 +101,9 @@ class TaskDetailController: UIViewController{
             addPhotoButton.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
             addPhotoButton.heightAnchor.constraint(equalToConstant: 32),
         ])
+        
+        //TODO:- Map
+        addPhotoButton.addTarget(self, action: #selector(didTapAddPhoto), for: .touchUpInside)
     }
     
     private func configureButton() {
@@ -108,4 +111,8 @@ class TaskDetailController: UIViewController{
            addPhotoButton.backgroundColor = buttonBackgroundColor
            addPhotoButton.layer.cornerRadius = buttonCornerRadius
        }
+    
+    @objc private func didTapAddPhoto(){
+        
+    }
 }
