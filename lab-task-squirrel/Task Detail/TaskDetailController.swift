@@ -113,6 +113,7 @@ class TaskDetailController: UIViewController{
        }
     
     @objc private func didTapAddPhoto(){
-        
+        if PHPhotoLibrary.authorizationStatus(for: .readWrite) != .authorized{
+        }
     }
 }
