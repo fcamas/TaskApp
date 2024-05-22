@@ -114,6 +114,19 @@ class TaskDetailController: UIViewController{
     
     @objc private func didTapAddPhoto(){
         if PHPhotoLibrary.authorizationStatus(for: .readWrite) != .authorized{
+            PHPhotoLibrary.requestAuthorization(for: .readWrite) { [weak self] status in
+                
+                switch status{
+                case.authorized:
+                    DispatchQueue.main.async {
+                       //MARK: -  TODO present imagepicker
+                    }
+                default:
+                    DispatchQueue.main.async {
+                        //MARK: - TODO present imagepicker 
+                    }
+                }
+            }
         }
     }
 }
